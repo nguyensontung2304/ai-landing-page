@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- <h2>Danh sách sản phẩm</h2>
+
+        <button id="showBtn">Hiển thị sản phẩm</button>
+
+        <br><br>
+
+        <input type="number" id="priceInput" placeholder="Nhập giá tối thiểu">
+        <button id="filterBtn">Lọc sản phẩm</button>
+
+        <br><br>
+
+        <button id="sortBtn">Sắp xếp tăng dần</button>
+
+        <br><br>
+
+        <ul id="productList"></ul>
+        <script>
+            const products = [
+                { id: 1, name: "Laptop", price: 1500 },
+                { id: 2, name: "Phone", price: 800 },
+                { id: 3, name: "Tablet", price: 600 },
+                { id: 4, name: "Monitor", price: 300 }
+            ];
+            
+            function a (data) {
+                return data.map(item => {
+                    return item.name
+                });
+            }
+            const n = a(products)
+            console.log(n)
+            
+            function x (data) {
+                let num = 0;
+                data.forEach(item => {
+                    num = num + item.price
+                
+                });
+                console.log(num)
+                return num
+            }
+            x(products)
+            
+            function y (data) {
+                return data.filter(function (item) {
+                    console.log(item.price > 700)
+                    return item.price > 700
+                })
+            }
+            y(products)
+
+            function z (data) {
+                return data.map(function(item) {
+                    console.log(item.name)
+                    return item.name
+                })
+            }
+            z(products)
+
+
+            const productList = document.getElementById("productList");
+            const showBtn = document.getElementById("showBtn");
+            const filterBtn = document.getElementById("filterBtn");
+            const sortBtn = document.getElementById("sortBtn");
+            const priceInput = document.getElementById("priceInput");
+
+            function renderProducts(data) {
+                productList.innerHTML = "";
+                console.log(data)
+                data.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = `${item.name} - ${item.price}$`;
+                    productList.appendChild(li);
+                });
+            }
+
+            showBtn.addEventListener("click", function () {
+                renderProducts(products);
+            });
+
+            filterBtn.addEventListener("click", function () {
+                const value = Number(priceInput.value);
+
+                const filtered = products.filter(item => item.price > value);
+
+                renderProducts(filtered);
+            });
+
+            sortBtn.addEventListener("click", function () {
+                const sorted = [...products].sort((a, b) => a.price - b.price);
+
+                renderProducts(sorted);
+            });
+        </script> -->
+        <script>
+            const products = [
+                { id: 1, name: "Laptop", price: 1000, stock: 5 },
+                { id: 2, name: "Phone", price: 500, stock: 0 },
+                { id: 3, name: "Tablet", price: 300, stock: 10 },
+                { id: 4, name: "Monitor", price: 700, stock: 2 }
+            ];
+            let a = products.map(function(product) {
+                return product.name
+            })
+            console.log(a)
+
+            let b = products.filter(function(product) {
+                return product.stock > 0
+            })
+            console.log(b)
+
+            let p = function sum(data) {
+                let t = 0;
+                return data.forEach(function(product) {
+                    t = t + product.price
+                }) 
+                return t
+            }
+            sum(products)
+            console
+        </script>
+    </body>
+</html>

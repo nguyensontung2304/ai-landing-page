@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Slick Custom Arrow & Dots</title>
+
+		<!-- Slick CSS -->
+		<link rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+		<link rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<!-- Slick JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+		<style>
+		body {
+			padding: 40px;
+		}
+
+		.slider {
+			width: 80%;
+			margin: auto;
+			position: relative;
+			padding-bottom: 90px;
+		}
+
+		.image-wrapper {
+			padding: 5px;
+		}
+
+		.slider img {
+			width: 100%;
+			border-radius: 12px;
+		}
+
+		.active {
+			background-color: red;
+		}
+	</style>
+	</head>
+
+	<body>
+
+		<div class="slider">
+			<div class="image-wrapper"><img
+					src="https://picsum.photos/800/400?1"></div>
+			<div class="image-wrapper"><img
+					src="https://picsum.photos/800/400?2"></div>
+			<div class="image-wrapper"><img
+					src="https://picsum.photos/800/400?3"></div>
+			<div class="image-wrapper"><img
+					src="https://picsum.photos/800/400?4"></div>
+			<div class="image-wrapper"><img
+					src="https://picsum.photos/800/400?4"></div>
+
+		</div>
+		<button class="slick-prevx">prv</button>
+		<ul id="custom-dots">
+			<li>cscs</li>
+			<li>cscs</li>
+			<li>cscs</li>
+			<li>cscs</li>
+			<li>cscs</li>
+		</ul>
+		<button class="slick-nextx">next</button>
+
+		<script>
+		$(document).ready(function () {
+			// $('#custom-dots')
+			$('.slider').on('init reInit afterChange', function (event, slick, currentSlide) {
+				var index = (currentSlide !== undefined ? currentSlide : 0) + 1;
+
+				var customDots = document.getElementById('custom-dots');
+				customDots.innerHTML = '';
+
+				for (var i = 1; i <= slick.slideCount; i++) {
+					var li = document.createElement('li');
+					if (i === index) li.classList.add('active');
+
+					var btn = document.createElement('button');
+					btn.textContent = i;
+
+					li.appendChild(btn);
+					customDots.appendChild(li);
+				}
+			});
+
+			$('.slider').slick({
+				centerMode: true,
+				centerPadding: '60px',
+				slidesToShow: 3,
+				dots: false,
+				arrows: false,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+							arrows: false
+						}
+					}
+				]
+			});
+		});
+
+		$('.slick-prevx').click(function () {
+			$('.slider').slick('slickPrev');
+		});
+		$('.slick-nextx').click(function () {
+			$('.slider').slick('slickNext');
+		});
+		
+	</script>
+
+	</body>
+
+</html>

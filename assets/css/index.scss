@@ -1,25 +1,25 @@
 /* base */
-@import "./base/reset.scss";
-@import "./base/grid.scss";
-@import "./base/body.scss";
+@use "./base/reset.scss";
+@use "./base/grid.scss";
+@use "./base/body.scss";
 
-@import "./home.scss";
-
+@use "./home.scss";
+ 
 /* layout */
-@import "./layout/header.scss";
-@import "./layout/footer.scss";
+@use "./layout/header.scss";
+@use "./layout/footer.scss";
 
 /* pages */
-@import "./pages/home/banner.scss";
-@import "./pages/home/productivity.scss";
-@import "./pages/home/course.scss";
-@import "./pages/home/skills.scss";
-@import "./pages/home/target.scss";
-@import "./pages/home/instructors.scss";
-@import "./pages/home/stories.scss";
-@import "./pages/home/learn.scss";
-@import "./pages/home/curriculum.scss";
-@import "./pages/home/certificate.scss";
-@import "./pages/home/price.scss";
-@import "./pages/home/questions.scss";
-@import "./pages/home/contact.scss";
+@use "./pages/home/banner.scss";
+@use "./pages/home/productivity.scss";
+@use "./pages/home/course.scss";
+@use "./pages/home/skills.scss";
+@use "./pages/home/target.scss";
+@use "./pages/home/instructors.scss";
+@use "./pages/home/stories.scss";
+@use "./pages/home/learn.scss";
+@use "./pages/home/curriculum.scss";
+@use "./pages/home/certificate.scss";
+@use "./pages/home/price.scss";
+@use "./pages/home/questions.scss";
+@use "./pages/home/contact.scss";
