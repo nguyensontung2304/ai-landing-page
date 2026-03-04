@@ -1084,11 +1084,6 @@ body {
   z-index: 0;
 }
 
-.background > *:not(.bg-layer) {
-  position: relative;
-  z-index: 2;
-}
-
 /* header */
 .header {
   width: 98%;
@@ -1104,7 +1099,7 @@ body {
   margin-top: 20px;
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 1000;
 }
 
 .header-img img {
@@ -1149,10 +1144,6 @@ body {
   margin-top: 100px;
 }
 .banner-content {
-  /* background-image: url(https://the7.io/elementor-ai/wp-content/uploads/sites/132/2025/01/art-bg-color.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 .banner-content-title {
@@ -1371,7 +1362,7 @@ body {
 
 .productivity-img img {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2466,7 +2457,7 @@ body {
   object-fit: cover;
   display: block;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   -webkit-mask-image: url(https://the7.io/elementor-ai/wp-content/uploads/sites/132/2024/12/mask-art-01.svg);
   -webkit-mask-size: contain;
   -webkit-mask-position: center center;
@@ -2530,10 +2521,35 @@ body {
   margin-top: 35px;
 }
 
+.footer-section-brand-icon i {
+  color: rgb(158, 138, 251);
+  font-size: 25px;
+}
+
 .footer-section-brand-input {
   display: flex;
+  align-items: center;
   gap: 10px;
   margin-top: 35px;
+}
+
+.footer-section-brand-input-icon {
+  color: rgb(158, 138, 251);
+  font-size: 18px;
+}
+
+.footer-section-brand-input input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: rgb(158, 138, 251);
+  font-size: 18px;
+  width: 100%;
+}
+
+.footer-section-brand-input input::placeholder {
+  color: #a78bfa;
+  opacity: 0.7;
 }
 
 .footer-section-contact {
@@ -2575,6 +2591,11 @@ body {
 }
 
 .footer-section-contact-lish-item p:hover {
+  color: rgb(158, 138, 251);
+}
+
+.footer-section-contact-icon {
+  font-size: 24px;
   color: rgb(158, 138, 251);
 }
 
@@ -2667,9 +2688,4 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: rgb(158, 138, 251);
-}
-
-.footer-icon {
-  color: rgb(158, 138, 251);
-  font-size: 25px;
 }
