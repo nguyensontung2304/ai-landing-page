@@ -1,0 +1,72 @@
+@use "../../abstracts" as *;
+
+.learn {
+  margin-top: 190px;
+
+  &-title {
+    margin-bottom: 60px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @include tablet() {
+      gap: 0;
+    }
+
+    &-list {
+      display: flex;
+      gap: 30px;
+
+      @include tablet() {
+        display: block;
+      }
+
+      @include mobile() {
+        margin-bottom: 20px;
+      }
+
+      &-item {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+
+        @include tablet() {
+          margin-top: 30px;
+        }
+
+        @include mobile() {
+          display: block;
+        }
+
+        &-img {
+          img {
+            width: 100%;
+            display: block;
+            border-radius: 20px;
+          }
+        }
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          @include tablet() {
+            display: flex;
+          }
+
+          @include mobile() {
+            margin-top: 20px;
+          }
+
+          h4 {
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+}

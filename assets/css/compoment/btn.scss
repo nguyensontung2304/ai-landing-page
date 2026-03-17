@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.btn {
+  border-radius: 40px;
+  font-weight: 600;
+  border: none;
+
+  &--sm {
+    padding: 15px 35px;
+    font-size: 13px;
+  }
+
+  &--md {
+    padding: 20px 50px;
+    font-size: 16px;
+  }
+
+  &--lg {
+    padding: 23px 50px;
+    font-size: 18px;
+  }
+
+  &--light {
+    background: rgba(105, 56, 239, 0.1215686275);
+    color: #6938ef;
+    border-color: #6938ef;
+    border-radius: 40px;
+    font-weight: 600;
+  }
+
+  &--gradient {
+    background: $violet-button;
+    color: $white-text-button;
+
+    &:hover {
+      background: $hover-button;
+    }
+  }
+}

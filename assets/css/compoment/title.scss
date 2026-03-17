@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.title {
+  font-size: 54px;
+  font-weight: 500;
+
+  &--white {
+    color: $white-title;
+  }
+
+  &--violet {
+    color: $violet-title;
+  }
+}

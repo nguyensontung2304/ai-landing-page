@@ -1,0 +1,54 @@
+@use "../../abstracts" as *;
+
+.course {
+  margin-top: 150px;
+
+  &-title {
+    margin-bottom: 60px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &-content {
+    display: flex;
+    gap: 10px;
+
+    @include tablet() {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 70px;
+    }
+
+    @include mobile() {
+      display: block;
+    }
+
+    &-item {
+      @include mobile() {
+        margin-bottom: 30px;
+      }
+
+      img {
+        width: 100%;
+        display: block;
+        border-radius: 20px;
+      }
+
+      h4 {
+        margin-top: 30px;
+
+        @include mobile() {
+          margin-top: 20px;
+        }
+      }
+
+      p {
+        margin-top: 20px;
+
+        @include mobile() {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

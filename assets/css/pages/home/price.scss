@@ -1,0 +1,96 @@
+@use "../../abstracts" as *;
+
+.price {
+  margin-top: 150px;
+
+  &-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &-list {
+    display: flex;
+    gap: 60px;
+    margin-top: 65px;
+    justify-content: center;
+
+    @include tablet() {
+      display: block;
+    }
+
+    &-item {
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      background: linear-gradient(
+        to bottom,
+        rgb(192, 181, 249) 0%,
+        rgba(228, 224, 252, 0.799) 40%,
+        rgba(239, 235, 255, 0.871) 70%,
+        rgb(255, 255, 255) 100%
+      );
+      text-align: center;
+      align-items: center;
+
+      @include tablet() {
+        margin-bottom: 30px;
+      }
+
+      &-title {
+        font-size: 26px;
+        font-weight: 500;
+        color: rgb(11, 1, 36);
+        padding-top: 33px;
+        padding-bottom: 10px;
+      }
+
+      &-line {
+        width: 50%;
+        height: 3px;
+        margin: 24px auto 0;
+        background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+        filter: blur(0.3px);
+        border-radius: 999px;
+      }
+
+      &-old {
+        font-size: 76px;
+        font-weight: 400;
+        color: rgb(11, 1, 36);
+        margin-top: 55px;
+      }
+
+      &-old-2 {
+        font-size: 46px;
+        font-weight: 500;
+        color: rgb(11, 1, 36);
+        margin-top: 55px;
+      }
+
+      &-new {
+        font-size: 24px;
+        font-weight: 500;
+        color: rgb(105, 56, 239);
+        margin-top: 25px;
+      }
+
+      &-new-payment {
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(11, 1, 36, 0.68);
+        margin-top: 30px;
+      }
+
+      &-btn {
+        margin-top: 75px;
+      }
+
+      &-btn-2 {
+        margin-top: 55px;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+/* ===== compoment ===== */
+@use "./compoment/btn.scss";
+@use "./compoment/text.scss";
+@use "./compoment/title.scss";
+@use "./compoment/frame.scss";
+
+/* ===== layout ===== */
+@use "./layout/header.scss";
+@use "./layout/footer.scss";
+
+/* ===== pages ===== */
+@use "./pages/home/home.scss";

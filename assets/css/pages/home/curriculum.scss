@@ -1,0 +1,158 @@
+@use "../../abstracts" as *;
+
+.curriculum {
+  width: 100%;
+  margin-top: 160px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  @include tablet() {
+    display: block;
+  }
+
+  &-list {
+    max-height: 470px;
+    overflow-y: auto;
+    position: relative;
+    padding: 0 10px 0 0;
+    box-sizing: content-box;
+
+    &.fade-bottom {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black calc(100% - 40px),
+        transparent 100%
+      );
+    }
+
+    &.fade-both {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 40px,
+        black calc(100% - 40px),
+        transparent 100%
+      );
+    }
+
+    &.fade-top {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 40px,
+        black 100%
+      );
+    }
+
+    /* fallback chuẩn */
+    mask-image: inherit;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #9b7bff, #6c3cff);
+      border-radius: 10px;
+    }
+
+    &-item {
+      width: 100%;
+      background-color: #260f62;
+      margin-bottom: 5px;
+      padding: 40px;
+      display: flex;
+      gap: 20px;
+
+      &:first-child {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      &-order {
+        margin-top: 5px;
+
+        h2 {
+          font-size: 30px;
+          font-weight: 500;
+          color: rgb(158, 138, 251);
+        }
+      }
+
+      &-content {
+        h3 {
+          line-height: 1.4;
+          margin-bottom: 15px;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    }
+  }
+
+  &-introduce {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet() {
+      margin-top: 50px;
+    }
+
+    &-title {
+      margin-bottom: 25px;
+    }
+
+    &-meta {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 20px;
+
+      @include mobile() {
+        display: inline;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      &-item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        &-icon {
+          font-size: 23px;
+          color: $violet-icon;
+        }
+
+        p {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &-text {
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(239, 238, 255, 0.75);
+        line-height: 1.5;
+      }
+    }
+  }
+}

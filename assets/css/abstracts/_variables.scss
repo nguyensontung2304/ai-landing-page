@@ -1,0 +1,29 @@
+$gradient-tim-trang: linear-gradient(
+  to bottom,
+  rgb(192, 181, 249) 0%,
+  rgba(228, 224, 252, 0.799) 40%,
+  rgba(239, 235, 255, 0.871) 70%,
+  rgb(255, 255, 255) 100%
+);
+
+$violet-button: linear-gradient(rgb(122, 90, 248) 0%, rgb(74, 31, 184) 100%);
+
+$white-text-button: rgb(255, 255, 255);
+
+/* title */
+
+$white-title: #efeeff;
+
+$violet-title: #9e8afb;
+
+$violet-icon: #6938ef;
+
+/* text */
+$light-white-text: rgba(239, 238, 255, 0.7490196078);
+
+$bold-white-text: rgb(239, 238, 255);
+
+/* hover button */
+$hover-button: #6316ff;
+
+$hover-text: rgb(158, 138, 251);

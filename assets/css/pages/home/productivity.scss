@@ -1,0 +1,55 @@
+@use "../../abstracts" as *;
+
+.productivity {
+  margin-top: 150px;
+  display: flex;
+  gap: 30px;
+
+  @include tablet() {
+    display: block;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &-subtitle {
+      font-size: 26px;
+      color: #9e8afb;
+    }
+  }
+
+  &-img {
+    @include tablet() {
+      margin-top: 50px;
+    }
+
+    img {
+      position: relative;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      -webkit-mask-image: url(https://the7.io/elementor-ai/wp-content/uploads/sites/132/2024/12/mask-art-01.svg);
+      -webkit-mask-size: contain;
+      -webkit-mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: -80px;
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(155, 120, 255, 0.7),
+        rgba(100, 60, 255, 0.3),
+        transparent 75%
+      );
+      filter: blur(70px);
+      z-index: 0;
+    }
+  }
+}

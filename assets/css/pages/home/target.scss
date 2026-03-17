@@ -1,0 +1,40 @@
+@use "../../abstracts" as *;
+
+.target {
+  width: 100%;
+
+  &-title {
+    margin-bottom: 60px;
+  }
+
+  &-content {
+    &-list {
+      display: flex;
+      margin-bottom: 35px;
+      gap: 60px;
+
+      @include tablet() {
+        display: block;
+      }
+
+      &-item {
+        display: flex;
+        gap: 20px;
+
+        @include tablet() {
+          margin-bottom: 35px;
+        }
+
+        &-text {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &-icon {
+    font-size: 46px;
+    color: white;
+  }
+}

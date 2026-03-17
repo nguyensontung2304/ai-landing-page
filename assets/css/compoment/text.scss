@@ -1,0 +1,36 @@
+@use "../abstracts" as *;
+
+.text {
+  font-weight: 500;
+
+  &--xs {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  &--sm {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &--md {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--lg {
+    font-size: 24px;
+  }
+
+  &--light-white {
+    color: $light-white-text;
+  }
+
+  &--bold-white {
+    color: $bold-white-text;
+  }
+
+  &--violet {
+    color: $violet-title;
+  }
+}

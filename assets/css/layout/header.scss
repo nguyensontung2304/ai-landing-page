@@ -1,0 +1,166 @@
+@use "../abstracts" as *;
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  background: linear-gradient(
+    to bottom,
+    #0b0124 0%,
+    #150731 95%,
+    #1c0f4b 98%,
+    #271564 100%
+  );
+  min-height: 100vh;
+}
+
+.header {
+  border-radius: 40px;
+  padding: 5px;
+  width: 95%;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $gradient-tim-trang;
+  gap: 10px;
+  z-index: 2;
+
+  @include tablet() {
+    height: 50px;
+  }
+
+  &-menu-toggle {
+    padding-left: 10px;
+    font-size: 30px;
+    display: none;
+
+    @include tablet() {
+      display: block;
+    }
+  }
+
+  &-logo {
+    width: 176px;
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    @include tablet() {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    li {
+      &:hover {
+        color: $hover-text;
+        transition: all 0.2s ease;
+      }
+    }
+
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  &-buttons {
+    display: block;
+
+    @include tablet() {
+      display: none;
+    }
+  }
+}
+
+.mobile-header {
+  transform: translateX(-100%);
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 33%;
+  height: 100%;
+  background: $gradient-tim-trang;
+  gap: 10px;
+  padding: 20px;
+  z-index: 4;
+
+  @include mobile() {
+    width: 70%;
+  }
+
+  &-menu-toggle-close {
+    display: flex;
+    justify-content: end;
+
+    &-icon {
+      width: 35px;
+      height: 35px;
+      border-radius: 100px;
+      background-color: rgba(105, 56, 239, 0.1215686275);
+      position: relative;
+      i {
+        color: #8065fb;
+        font-size: 20px;
+        position: absolute;
+        left: 30%;
+        transform: translateY(35%);
+      }
+    }
+  }
+
+  &-logo {
+    width: 170px;
+    img {
+      width: 100%;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+  &-menu {
+    margin-top: 50px;
+    li {
+      margin-bottom: 25px;
+      font-size: 23px;
+      font-weight: 400;
+
+      &:hover {
+        color: $hover-text;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+
+  &-buttons {
+    margin-top: 50px;
+    display: block;
+  }
+}
+
+.mobile-header-active {
+  @include tablet() {
+    transition: 0.5s;
+    transform: translateX(0);
+  }
+}
+
+.back-drop {
+  inset: 0;
+  position: fixed;
+  z-index: 3;
+  background-color: #000000dc;
+  display: none;
+  &-active {
+    display: block;
+  }
+}

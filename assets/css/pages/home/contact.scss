@@ -1,0 +1,96 @@
+@use "../../abstracts" as *;
+
+.contact {
+  width: 100%;
+  display: flex;
+  margin-top: 190px;
+
+  @include tablet() {
+    display: block;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &-info {
+      display: flex;
+
+      &-phone {
+        display: flex;
+        gap: 15px;
+
+        p {
+          font-size: 24px;
+          font-weight: 500;
+          color: rgb(239, 238, 255);
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &-email {
+        display: flex;
+        gap: 15px;
+
+        p {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    &-form {
+      display: flex;
+      gap: 20px;
+
+      input {
+        padding: 18px 18px;
+        background-color: #ebe9fe;
+        font-size: 18px;
+        color: black;
+        border-radius: 999px;
+        border: none;
+      }
+    }
+  }
+
+  &-img {
+    @include tablet() {
+      margin-top: 50px;
+    }
+
+    img {
+      position: relative;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      -webkit-mask-image: url(https://the7.io/elementor-ai/wp-content/uploads/sites/132/2024/12/mask-art-01.svg);
+      -webkit-mask-size: contain;
+      -webkit-mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: -80px;
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(155, 120, 255, 0.7),
+        rgba(100, 60, 255, 0.3),
+        transparent 75%
+      );
+      filter: blur(70px);
+      z-index: 0;
+    }
+  }
+
+  &-icon {
+    font-size: 24px;
+    color: rgb(158, 138, 251);
+  }
+}

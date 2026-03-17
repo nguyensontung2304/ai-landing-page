@@ -1,0 +1,81 @@
+@use "../../abstracts" as *;
+
+.questions {
+  width: 100%;
+  margin-top: 165px;
+
+  &-title {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 70px;
+
+    &-item {
+      display: flex;
+      padding: 20px;
+      gap: 25px;
+      background-color: #260f62;
+
+      p {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: $hover-text;
+          transition: all 0.2s ease;
+        }
+      }
+    }
+
+    &-item-1 {
+      display: flex;
+      padding: 20px;
+      gap: 25px;
+      background-color: #260f62;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+
+      p {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: $hover-text;
+          transition: all 0.2s ease;
+        }
+      }
+    }
+
+    &-item-2 {
+      display: flex;
+      padding: 20px;
+      gap: 25px;
+      background-color: #260f62;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      p {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: $hover-text;
+          transition: all 0.2s ease;
+        }
+      }
+    }
+  }
+
+  &-icon {
+    color: $violet-icon;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+  }
+}

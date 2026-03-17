@@ -1,0 +1,40 @@
+@use "../../abstracts" as *;
+
+.instructors {
+  margin-top: 150px;
+
+  &-title {
+    margin-bottom: 60px;
+  }
+
+  &-content {
+    &-list {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+
+      @include tablet() {
+        display: flex;
+        gap: 70px;
+        flex-wrap: wrap;
+      }
+      &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &-img {
+          border-radius: 20px;
+          overflow: hidden;
+          margin-bottom: 18px;
+
+          img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
