@@ -3,8 +3,16 @@
 .learn {
   margin-top: 190px;
 
+  @include mobile() {
+    margin-top: 100px;
+  }
+
   &-title {
     margin-bottom: 60px;
+
+    @include mobile() {
+      margin-bottom: 20px;
+    }
   }
 
   &-content {

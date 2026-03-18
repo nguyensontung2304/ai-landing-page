@@ -12,12 +12,17 @@
 
   .banner {
     position: relative;
+    overflow: hidden;
     &-content {
       &-title {
         font-size: 80px;
         line-height: 1.1em;
         margin-top: 100px;
         color: #efeeff;
+
+        @include mobile() {
+          font-size: 50px;
+        }
       }
       &-bottom {
         margin-top: 70px;
@@ -58,7 +63,8 @@
       margin-top: 70px;
       width: 400px;
       position: absolute;
-      bottom: 90px;
+      bottom: 80px;
+      right: 0px;
 
       @include desktop() {
         width: 350px;
@@ -115,8 +121,12 @@
       }
     }
     &-icon {
-      font-size: 46px;
+      font-size: 40px;
       color: white;
+
+      @include mobile() {
+        font-size: 30px;
+      }
     }
   }
 }

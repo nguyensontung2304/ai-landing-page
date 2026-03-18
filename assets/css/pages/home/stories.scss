@@ -1,9 +1,19 @@
+@use "../../abstracts" as *;
+
 .stories {
   width: 100%;
   margin-top: 160px;
 
+  @include mobile() {
+    margin-top: 100px;
+  }
+
   &-title {
     margin-bottom: 50px;
+
+    @include mobile() {
+      margin-bottom: 20px;
+    }
   }
 
   &-content {

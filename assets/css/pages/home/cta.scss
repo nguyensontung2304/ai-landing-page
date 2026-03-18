@@ -19,6 +19,10 @@
     display: block;
   }
 
+  @include mobile() {
+    margin-top: 100px;
+  }
+
   &-img {
     img {
       width: 100%;
@@ -57,10 +61,18 @@
         padding-left: 50px;
       }
 
+      @include mobile() {
+        padding: 0;
+        display: inline;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+      }
+
       &-item {
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 10px;
 
         &-icon {
@@ -80,6 +92,20 @@
       display: flex;
       gap: 20px;
       justify-content: center;
+
+      @include mobile() {
+        display: block;
+      }
+
+      button {
+        width: 250px;
+
+        @include mobile() {
+          margin-top: 20px;
+          width: 80%;
+          margin-left: 40px;
+        }
+      }
     }
   }
 }

@@ -82,6 +82,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 /* ===== layout ===== */
@@ -241,6 +242,11 @@ body {
   width: 100%;
   margin-top: 150px;
 }
+@media only screen and (max-width: 768px) {
+  .footer {
+    margin-top: 100px;
+  }
+}
 .footer-section {
   display: flex;
 }
@@ -378,9 +384,22 @@ body {
   margin-top: 100px;
   margin-bottom: 50px;
 }
+@media only screen and (max-width: 768px) {
+  .footer-copyright {
+    display: block;
+    margin-top: 50px;
+  }
+}
 .footer-copyright-text {
   border-right: 1px solid rgba(239, 238, 255, 0.7490196078);
   padding-right: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .footer-copyright-text {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border: none;
+  }
 }
 .footer-copyright-text p {
   font-size: 14px;
@@ -391,6 +410,12 @@ body {
   border-right: 1px solid rgba(239, 238, 255, 0.7490196078);
   padding-left: 10px;
   padding-right: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .footer-copyright-text-2 {
+    margin-bottom: 10px;
+    border: none;
+  }
 }
 .footer-copyright-text-2 p {
   font-size: 14px;
@@ -422,12 +447,18 @@ body {
 }
 .banner-background .banner {
   position: relative;
+  overflow: hidden;
 }
 .banner-background .banner-content-title {
   font-size: 80px;
   line-height: 1.1em;
   margin-top: 100px;
   color: #efeeff;
+}
+@media only screen and (max-width: 768px) {
+  .banner-background .banner-content-title {
+    font-size: 50px;
+  }
 }
 .banner-background .banner-content-bottom {
   margin-top: 70px;
@@ -467,7 +498,8 @@ body {
   margin-top: 70px;
   width: 400px;
   position: absolute;
-  bottom: 90px;
+  bottom: 80px;
+  right: 0px;
 }
 @media only screen and (max-width: 1200px) {
   .banner-background .banner-img {
@@ -525,8 +557,13 @@ body {
   color: #efeeff;
 }
 .banner-background .banner-icon {
-  font-size: 46px;
+  font-size: 40px;
   color: white;
+}
+@media only screen and (max-width: 768px) {
+  .banner-background .banner-icon {
+    font-size: 30px;
+  }
 }
 
 .cta {
@@ -541,6 +578,11 @@ body {
 @media only screen and (max-width: 992px) {
   .cta {
     display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cta {
+    margin-top: 100px;
   }
 }
 .cta-img img {
@@ -582,10 +624,19 @@ body {
     padding-left: 50px;
   }
 }
+@media only screen and (max-width: 768px) {
+  .cta-content-meta {
+    padding: 0;
+    display: inline;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+  }
+}
 .cta-content-meta-item {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
 }
 .cta-content-meta-item-icon {
@@ -602,6 +653,21 @@ body {
   gap: 20px;
   justify-content: center;
 }
+@media only screen and (max-width: 768px) {
+  .cta-content-btn {
+    display: block;
+  }
+}
+.cta-content-btn button {
+  width: 250px;
+}
+@media only screen and (max-width: 768px) {
+  .cta-content-btn button {
+    margin-top: 20px;
+    width: 80%;
+    margin-left: 40px;
+  }
+}
 
 .productivity {
   margin-top: 150px;
@@ -611,6 +677,11 @@ body {
 @media only screen and (max-width: 992px) {
   .productivity {
     display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .productivity {
+    margin-top: 100px;
   }
 }
 .productivity-content {
@@ -651,10 +722,20 @@ body {
 .course {
   margin-top: 150px;
 }
+@media only screen and (max-width: 768px) {
+  .course {
+    margin-top: 100px;
+  }
+}
 .course-title {
   margin-bottom: 60px;
   display: flex;
   gap: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .course-title {
+    display: block;
+  }
 }
 .course-content {
   display: flex;
@@ -707,6 +788,11 @@ body {
   border-radius: 30px;
   padding: 0;
   overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .skills {
+    margin-bottom: 100px;
+  }
 }
 @media only screen and (max-width: 992px) {
   .skills {
@@ -782,6 +868,11 @@ body {
 .target-title {
   margin-bottom: 60px;
 }
+@media only screen and (max-width: 768px) {
+  .target-title {
+    margin-bottom: 40px;
+  }
+}
 .target-content-list {
   display: flex;
   margin-bottom: 35px;
@@ -806,15 +897,30 @@ body {
   align-items: center;
 }
 .target-icon {
-  font-size: 46px;
+  font-size: 40px;
   color: white;
+}
+@media only screen and (max-width: 768px) {
+  .target-icon {
+    font-size: 30px;
+  }
 }
 
 .instructors {
   margin-top: 150px;
 }
+@media only screen and (max-width: 768px) {
+  .instructors {
+    margin-top: 100px;
+  }
+}
 .instructors-title {
   margin-bottom: 60px;
+}
+@media only screen and (max-width: 768px) {
+  .instructors-title {
+    margin-bottom: 40px;
+  }
 }
 .instructors-content-list {
   display: flex;
@@ -848,8 +954,18 @@ body {
   width: 100%;
   margin-top: 160px;
 }
+@media only screen and (max-width: 768px) {
+  .stories {
+    margin-top: 100px;
+  }
+}
 .stories-title {
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .stories-title {
+    margin-bottom: 20px;
+  }
 }
 .stories-content-viewport {
   display: block;
@@ -925,8 +1041,18 @@ body {
 .learn {
   margin-top: 190px;
 }
+@media only screen and (max-width: 768px) {
+  .learn {
+    margin-top: 100px;
+  }
+}
 .learn-title {
   margin-bottom: 60px;
+}
+@media only screen and (max-width: 768px) {
+  .learn-title {
+    margin-bottom: 20px;
+  }
 }
 .learn-content {
   display: flex;
@@ -1000,7 +1126,12 @@ body {
 }
 @media only screen and (max-width: 992px) {
   .curriculum {
-    display: block;
+    flex-direction: column-reverse;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .curriculum {
+    margin-top: 100px;
   }
 }
 .curriculum-list {
@@ -1115,6 +1246,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 75px;
+  margin-top: 190px;
+}
+@media only screen and (max-width: 768px) {
+  .certificate {
+    margin-top: 100px;
+    gap: 30px;
+  }
 }
 .certificate-content {
   display: flex;
@@ -1129,10 +1267,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: 190px;
 }
 .certificate-content-img {
   margin-top: 120px;
+}
+@media only screen and (max-width: 992px) {
+  .certificate-content-img {
+    margin-top: 30px;
+  }
 }
 .certificate-content-img img {
   width: 100%;
@@ -1146,52 +1288,52 @@ body {
   .certificate-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 90px;
+    gap: 70px;
   }
 }
 @media only screen and (max-width: 768px) {
   .certificate-list {
-    gap: 50px;
+    gap: 30px;
   }
 }
 .certificate-list-item {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
-.certificate-list-item-icon {
-  width: 58px;
-  height: 58px;
-  background-color: #6938ef;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}
-.certificate-list-item-title {
-  font-size: 22px;
-  font-weight: 500;
-  color: rgb(239, 238, 255);
-}
-.certificate-list-item-text {
-  font-size: 18px;
-  font-weight: 400;
-  color: rgba(239, 238, 255, 0.75);
-  line-height: 1.5;
+@media only screen and (max-width: 768px) {
+  .certificate-list-item {
+    gap: 5px;
+  }
 }
 .certificate-icon {
-  font-size: 26px;
+  font-size: 40px;
   color: white;
+}
+@media only screen and (max-width: 768px) {
+  .certificate-icon {
+    font-size: 30px;
+  }
 }
 
 .price {
   margin-top: 150px;
+}
+@media only screen and (max-width: 768px) {
+  .price {
+    margin-top: 100px;
+  }
 }
 .price-title {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 35px;
+}
+@media only screen and (max-width: 768px) {
+  .price-title {
+    gap: 20px;
+  }
 }
 .price-list {
   display: flex;
@@ -1202,6 +1344,11 @@ body {
 @media only screen and (max-width: 992px) {
   .price-list {
     display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .price-list {
+    margin-top: 30px;
   }
 }
 .price-list-item {
@@ -1268,6 +1415,11 @@ body {
   width: 100%;
   margin-top: 165px;
 }
+@media only screen and (max-width: 768px) {
+  .questions {
+    margin-top: 100px;
+  }
+}
 .questions-title {
   display: flex;
   justify-content: center;
@@ -1278,6 +1430,11 @@ body {
   align-items: center;
   gap: 4px;
   margin-top: 70px;
+}
+@media only screen and (max-width: 768px) {
+  .questions-content {
+    margin-top: 30px;
+  }
 }
 .questions-content-item {
   display: flex;
@@ -1342,17 +1499,37 @@ body {
     display: block;
   }
 }
+@media only screen and (max-width: 768px) {
+  .contact {
+    margin-top: 100px;
+  }
+}
 .contact-content {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
+@media only screen and (max-width: 768px) {
+  .contact-content {
+    gap: 30px;
+  }
+}
 .contact-content-info {
   display: flex;
+}
+@media only screen and (max-width: 768px) {
+  .contact-content-info {
+    display: block;
+  }
 }
 .contact-content-info-phone {
   display: flex;
   gap: 15px;
+}
+@media only screen and (max-width: 768px) {
+  .contact-content-info-phone {
+    margin-bottom: 10px;
+  }
 }
 .contact-content-info-phone p {
   font-size: 24px;
@@ -1373,6 +1550,11 @@ body {
   display: flex;
   gap: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .contact-content-form {
+    display: block;
+  }
+}
 .contact-content-form input {
   padding: 18px 18px;
   background-color: #ebe9fe;
@@ -1380,6 +1562,7 @@ body {
   color: black;
   border-radius: 999px;
   border: none;
+  margin-bottom: 10px;
 }
 @media only screen and (max-width: 992px) {
   .contact-img {

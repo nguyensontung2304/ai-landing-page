@@ -4,6 +4,12 @@
   display: flex;
   flex-direction: column;
   gap: 75px;
+  margin-top: 190px;
+
+  @include mobile() {
+    margin-top: 100px;
+    gap: 30px;
+  }
 
   &-content {
     display: flex;
@@ -17,11 +23,14 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
-      margin-top: 190px;
     }
 
     &-img {
       margin-top: 120px;
+
+      @include tablet() {
+        margin-top: 30px;
+      }
 
       img {
         width: 100%;
@@ -37,45 +46,30 @@
     @include tablet() {
       display: flex;
       flex-wrap: wrap;
-      gap: 90px;
+      gap: 70px;
     }
 
     @include mobile() {
-      gap: 50px;
+      gap: 30px;
     }
 
     &-item {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
 
-      &-icon {
-        width: 58px;
-        height: 58px;
-        background-color: #6938ef;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-      }
-
-      &-title {
-        font-size: 22px;
-        font-weight: 500;
-        color: rgb(239, 238, 255);
-      }
-
-      &-text {
-        font-size: 18px;
-        font-weight: 400;
-        color: rgba(239, 238, 255, 0.75);
-        line-height: 1.5;
+      @include mobile() {
+        gap: 5px;
       }
     }
   }
 
   &-icon {
-    font-size: 26px;
+    font-size: 40px;
     color: white;
+
+    @include mobile() {
+      font-size: 30px;
+    }
   }
 }

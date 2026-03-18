@@ -3,10 +3,18 @@
 .course {
   margin-top: 150px;
 
+  @include mobile() {
+    margin-top: 100px;
+  }
+
   &-title {
     margin-bottom: 60px;
     display: flex;
     gap: 20px;
+
+    @include mobile() {
+      display: block;
+    }
   }
 
   &-content {

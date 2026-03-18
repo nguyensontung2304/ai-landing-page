@@ -5,6 +5,10 @@
 
   &-title {
     margin-bottom: 60px;
+
+    @include mobile() {
+      margin-bottom: 40px;
+    }
   }
 
   &-content {
@@ -34,7 +38,11 @@
   }
 
   &-icon {
-    font-size: 46px;
+    font-size: 40px;
     color: white;
+
+    @include mobile() {
+      font-size: 30px;
+    }
   }
 }
