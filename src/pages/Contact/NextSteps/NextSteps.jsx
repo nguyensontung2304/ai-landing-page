@@ -1,0 +1,3 @@
+import "./nextSteps.scss";
+const steps=[["01","We read your note","A member of the learning team reviews your goals and what you hope to improve."],["02","We suggest a direction","Get a clear answer about course fit, team options, or another good place to start."],["03","You decide what is useful","There is no obligation to enroll after a conversation. Take the information and decide in your own time."]];
+export default function NextSteps() { return <div className="contact-next"><span className="eyebrow">What happens next</span>{steps.map(([n,title,text])=><article key={n}><b>{n}</b><p><strong>{title}</strong><br />{text}</p></article>)}</div>; }

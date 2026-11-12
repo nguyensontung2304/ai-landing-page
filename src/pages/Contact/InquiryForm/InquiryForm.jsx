@@ -1,0 +1,7 @@
+import { useState } from "react";
+import "./inquiryForm.scss";
+export default function InquiryForm() {
+  const [submitted,setSubmitted]=useState(false);
+  const submit=(event)=>{event.preventDefault();setSubmitted(true);};
+  return <form className="contact-form surface" onSubmit={submit}><div className="contact-form__heading"><span className="eyebrow">Send an inquiry</span><h2>What can we help with?</h2><p>Give us enough context to make our reply useful. Required fields are marked by the browser.</p></div><label>Your name<input name="name" autoComplete="name" placeholder="Jane Smith" required /></label><label>Work email<input name="email" type="email" autoComplete="email" placeholder="jane@company.com" required /></label><label>I’m interested in<select name="interest" defaultValue="course"><option value="course">The individual course</option><option value="team">Training for my team</option><option value="partnership">A partnership</option><option value="other">Something else</option></select></label><label>What are you hoping to improve?<textarea name="message" rows="5" placeholder="Tell us a little about the work you have in mind…" required /></label><button className="button" type="submit">Send inquiry <span aria-hidden="true">↗</span></button>{submitted&&<p className="contact-form__success" role="status">Thanks for reaching out. This form is ready to connect to your admissions inbox.</p>}<small>We’ll only use your details to respond to this inquiry.</small></form>;
+}

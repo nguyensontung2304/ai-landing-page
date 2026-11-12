@@ -1,0 +1,2 @@
+import "./intro.scss";
+export default function Intro() { return <section className="page-container page-intro contact-intro"><span className="eyebrow">Let’s start a conversation</span><h1 className="page-title">Tell us what you<br /><span>want to make possible.</span></h1><p className="page-lead">Ask about the course, team training, or finding the right first AI project. Share the kind of work you have in mind and our learning team can help you find a useful next step.</p></section>; }

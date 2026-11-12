@@ -1,0 +1,4 @@
+import "./story.scss";
+export default function Story() {
+  return <section className="page-container about-story page-section"><div className="about-story__label"><span className="eyebrow">Why we exist</span><span className="about-story__symbol" aria-hidden="true">✳</span></div><div><h2 className="section-title">The opportunity is bigger than a prompt.</h2><p className="section-copy">AI is changing the way research, communication, planning, and service happen. The lasting advantage does not come from memorizing a list of tools. It comes from knowing how to frame a problem, guide a system, and check the result.</p><p className="section-copy">Applied AI Academy was created to make that capability accessible to the people doing the work every day. We translate fast-moving technology into calm, repeatable practices teams can trust. That means learning the habits around the tools as carefully as learning the tools themselves.</p></div></section>;
+}

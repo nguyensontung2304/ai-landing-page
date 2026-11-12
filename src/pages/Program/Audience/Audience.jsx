@@ -1,0 +1,3 @@
+import "./audience.scss";
+const fit=["There is a recurring task you would like to do with less friction.","You want to understand AI well enough to make thoughtful choices.","You can set aside a few hours each week to test ideas and learn."];
+export default function Audience() { return <section className="page-container program-fit page-section"><span className="eyebrow">A good fit if…</span><h2 className="section-title">You are ready to make a practical change.</h2><div className="program-fit__list">{fit.map(text=><p key={text}>{text}</p>)}</div><p className="program-fit__note">You do not need coding experience. Bring curiosity and one real work challenge; we will help you shape it into a useful project.</p></section>; }

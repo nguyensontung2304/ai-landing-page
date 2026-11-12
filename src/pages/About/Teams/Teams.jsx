@@ -1,0 +1,5 @@
+import "./teams.scss";
+const roles = [["OPERATIONS", "Reduce repetitive handoffs and make routine processes easier to maintain."], ["COMMUNICATION", "Move from a blank page to a thoughtful first draft while keeping your own point of view."], ["LEADERSHIP", "Set sensible expectations and help colleagues experiment with confidence."], ["CLIENT SERVICE", "Give teams more time to listen, solve problems, and respond with care."]];
+export default function Teams() {
+  return <section className="page-container about-journey page-section"><div><span className="eyebrow">Designed for the whole team</span><h2 className="section-title">Different roles.<br />A shared way forward.</h2><p className="section-copy">The course welcomes people from operations, marketing, leadership, client service, and independent practice. Learning together makes it easier to see where a workflow crosses team boundaries.</p></div><div className="about-journey__cards">{roles.map(([role,text])=><article key={role}><span>{role}</span><p>{text}</p></article>)}</div></section>;
+}

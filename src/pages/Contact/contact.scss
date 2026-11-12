@@ -1,0 +1,2 @@
+.page-contact { padding-bottom:35px; }.contact-layout { display:grid;grid-template-columns:.8fr 1.2fr;align-items:start;gap:clamp(35px,7vw,90px); }.contact-layout__side { display:grid;gap:10px; }
+@media(max-width:800px) { .contact-layout { grid-template-columns:1fr; }.contact-next { margin-top:0; } }

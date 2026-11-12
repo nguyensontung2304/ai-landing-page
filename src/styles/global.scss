@@ -1,0 +1,43 @@
+@use "./components/btn";
+@use "./components/frame";
+@use "./components/text";
+@use "./components/title";
+
+:root {
+  font-family: "Quicksand", sans-serif;
+  color: #f6f3ff;
+  background: #100921;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --color-bg: #100921;
+  --color-panel: #1b1230;
+  --color-panel-soft: #24183d;
+  --color-text: #f6f3ff;
+  --color-muted: #b9aecb;
+  --color-accent: #a78bfa;
+  --color-accent-strong: #8057ee;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --content-width: 1160px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--color-bg); }
+button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; }
+button { cursor: pointer; }
+img { max-width: 100%; }
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+.page { flex: 1; }
+.page-container { width: min(var(--content-width), calc(100% - 40px)); margin-right: auto; margin-left: auto; }
+.eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #c1b2d7; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.page-title { margin: 22px 0 16px; font-size: clamp(46px, 6.3vw, 78px); line-height: 1.02; letter-spacing: -.06em; }
+.page-title span { color: #ad91ff; }
+.page-lead { max-width: 690px; margin: 0; color: var(--color-muted); font-size: 18px; line-height: 1.8; }
+.page-intro { padding-top: 88px; padding-bottom: 68px; }
+.page-section { padding-top: 42px; padding-bottom: 88px; }
+.section-title { margin: 0 0 12px; font-size: clamp(32px, 3.8vw, 46px); letter-spacing: -.045em; }
+.section-copy { color: var(--color-muted); line-height: 1.75; }
+.surface { border: 1px solid var(--color-border); border-radius: 18px; background: linear-gradient(145deg, #211735, #171023); }
+@media (max-width: 620px) { .page-container { width: min(100% - 32px, var(--content-width)); }.page-intro { padding-top: 62px; padding-bottom: 45px; }.page-section { padding-bottom: 58px; }.page-lead { font-size: 16px; } }

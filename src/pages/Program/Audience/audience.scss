@@ -1,0 +1,2 @@
+.program-fit { padding-top:80px; }.program-fit .section-title { margin-top:15px; }.program-fit__list { display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px; }.program-fit__list p { margin:0;padding:19px;border:1px solid var(--color-border);border-radius:12px;color:#e3d9ee;background:#1a1229;font-size:16px;line-height:1.65; }.program-fit__note { margin-top:17px;color:var(--color-muted);font-size:15px;line-height:1.6; }
+@media(max-width:700px) { .program-fit__list { grid-template-columns:1fr; } }

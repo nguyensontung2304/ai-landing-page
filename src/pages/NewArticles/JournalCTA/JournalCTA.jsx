@@ -1,0 +1,2 @@
+import "./journalCTA.scss";
+export default function JournalCTA() { return <section className="page-container articles-signup"><div><span className="eyebrow">A considered note, now and then</span><h2>Stay curious. Keep it practical.</h2><p>Have a question you would like us to explore? Suggest a topic or tell us where AI is changing the way your team works.</p></div><a className="button button--outline" href="/contact">Suggest a topic <span aria-hidden="true">↗</span></a></section>; }

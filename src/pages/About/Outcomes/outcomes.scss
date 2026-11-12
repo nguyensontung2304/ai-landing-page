@@ -1,0 +1,2 @@
+.about-outcome { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; }.about-outcome .section-copy { max-width: 440px; font-size: 17px; }.about-outcome__list { display: grid; gap: 0; }.about-outcome__list p { margin: 0; padding: 17px 0; border-bottom: 1px solid var(--color-border); color: #e5def0; font-size: 17px; line-height: 1.5; }.about-outcome__list b { margin-right: 14px; color: #a98cf8; font-size: 14px; }
+@media(max-width:700px) { .about-outcome { grid-template-columns: 1fr; } }

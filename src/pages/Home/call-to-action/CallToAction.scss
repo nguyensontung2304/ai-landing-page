@@ -1,0 +1,111 @@
+@use "../../../styles/abstracts" as *;
+
+.cta {
+  display: flex;
+  margin-top: 150px;
+  border: none;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 0;
+  background: linear-gradient(
+    to bottom,
+    rgb(192, 181, 249) 0%,
+    rgba(228, 224, 252, 0.799) 40%,
+    rgba(239, 235, 255, 0.871) 70%,
+    rgb(255, 255, 255) 100%
+  );
+
+  @include tablet() {
+    display: block;
+  }
+
+  @include mobile() {
+    margin-top: 100px;
+  }
+
+  &-img {
+    img {
+      width: 100%;
+      display: block;
+
+      @include tablet() {
+        height: 400px;
+        width: 100%;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 60px;
+
+    @include desktop() {
+      gap: 20px;
+    }
+
+    @include tablet() {
+      gap: 20px;
+      padding-bottom: 30px;
+    }
+
+    &-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      font-size: 18px;
+
+      @include tablet() {
+        padding-left: 50px;
+      }
+
+      @include mobile() {
+        padding: 0;
+        display: inline;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &-icon {
+          font-size: 23px;
+          color: $violet-icon;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 44px;
+      display: flex;
+      text-align: center;
+    }
+
+    &-btn {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+
+      @include mobile() {
+        display: block;
+      }
+
+      button {
+        width: 250px;
+
+        @include mobile() {
+          margin-top: 20px;
+          width: 80%;
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}

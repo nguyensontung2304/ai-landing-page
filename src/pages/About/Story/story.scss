@@ -1,0 +1,2 @@
+.about-story { display: grid; grid-template-columns: .7fr 1.3fr; gap: 8vw; padding-top: 40px; border-top: 1px solid var(--color-border); }.about-story__label { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; }.about-story__symbol { color: #a98cf8; font-size: 55px; }.about-story .section-title { max-width: 600px; }.about-story .section-copy { max-width: 700px; margin: 16px 0; font-size: 17px; }
+@media(max-width:700px) { .about-story { grid-template-columns: 1fr; gap: 18px; }.about-story__symbol { display: none; } }

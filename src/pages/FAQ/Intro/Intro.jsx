@@ -1,0 +1,2 @@
+import "./intro.scss";
+export default function Intro() { return <section className="page-container page-intro faq-intro"><span className="eyebrow">A few helpful answers</span><h1 className="page-title">Questions, <span>answered.</span></h1><p className="page-lead">Everything you need to know before joining Applied AI Academy. Review the details below, then get in touch if you would like to talk through your goals or a specific team challenge.</p><a className="button faq-intro__link" href="/contact">Talk with our team <span aria-hidden="true">↗</span></a></section>; }
